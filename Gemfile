@@ -11,6 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'byebug', platform: :mri
   gem 'factory_girl', '~> 4.7'
   gem 'pry'
