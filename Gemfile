@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'factory_girl', '~> 4.7'
+  gem 'pry'
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 end
 
