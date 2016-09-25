@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
   gem 'factory_girl', '~> 4.7'
   gem 'pry'
   gem 'pry-rails'
