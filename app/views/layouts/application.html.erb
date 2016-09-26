@@ -12,6 +12,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: "partials/navigation" %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render partial: "partials/footer" %>
   </body>
 </html>

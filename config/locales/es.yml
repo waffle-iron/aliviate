@@ -19,5 +19,13 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+es:
+  logo: "Aliviate"
+  home: "Inicio"
+  news: "Noticias"
+  schedule: "Programación"
+  doctors_office: "Consultorio"
+  appointments: "Citas"
+  products: "Productos"
+  contact: "Contacto"
+  about: "Nosotros"
