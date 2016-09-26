@@ -183,7 +183,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bootstrap-sass (~> 3.3.6)
+  bootstrap-sass (~> 3.3, >= 3.3.7)
   byebug
   dotenv-rails (~> 2.1, >= 2.1.1)
   factory_girl (~> 4.7)
