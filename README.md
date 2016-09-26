@@ -6,7 +6,6 @@
 
 *Remember: Each change should be documented here*
 
-
 ## Contributing
 
 1. [Fork it](https://github.com/fmauricios/aliviate)
@@ -14,3 +13,6 @@
 3. Commit your changes: git commit -am 'Add my idea'
 4. Push to the branch: git push origin my-idea
 5. Create a new Pull Request and explain your code in the markdown file
+
+
+### [Thanks these people for making this possible](https://github.com/fmauricios/aliviate/graphs/contributors) :)
