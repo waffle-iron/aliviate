@@ -2,6 +2,7 @@ ruby '2.3.1'
 
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
