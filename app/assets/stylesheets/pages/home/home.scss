@@ -1,0 +1,21 @@
+.navbar-brand{
+  width: 5px;
+  height: 2px;
+}
+.navbar-nav{
+  margin-top: 17px;
+}
+/* px, em, rem
+   Airbnb style guide css
+   Follow Bem methodology*/
+.logo {
+  width: 200px;
+  height: 60px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+@media screen and (min-width:600px){
+  .navbar-header{
+    margin-top: 0.3px;
+  }
+}
