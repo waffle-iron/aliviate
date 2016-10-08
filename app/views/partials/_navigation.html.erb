@@ -1,30 +1,26 @@
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= image_tag("logo.png", class:"logo")%>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class=""><a href="#"><%= t('home') %></a></li>
-          <li class=""><a href="#"><%= t('news') %></a></li>
-          <li class=""><a href="#"><%= t('schedule') %></a></li>
-          <li class=""><a href="#"><%= t('doctors_office') %></a></li>
-          <li class=""><a href="#"><%= t('appointments') %></a></li>
-          <li class=""><a href="#"><%= t('products') %></a></li>
-          <li class=""><a href="#"><%= t('contact') %></a></li>
-          <li class=""><a href="#"><%= t('about') %></a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</header>
+<nav class="blue darken-3">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a href="#!" class="brand-logo">ALIVIATE</a>
+    </div>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li> <%= link_to t('news').upcase, root_path %></li>
+      <li> <%= link_to t('schedule').upcase.upcase, root_path %></li>
+      <li> <%= link_to t('doctors_office').upcase, root_path %></li>
+      <li> <%= link_to t('appointments').upcase, root_path %></li>
+      <li> <%= link_to t('products').upcase, root_path %></li>
+      <li> <%= link_to t('contact').upcase, root_path %></li>
+      <li> <%= link_to t('about').upcase, root_path %></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li> <%= link_to t('news'), root_path %></li>
+      <li> <%= link_to t('schedule'), root_path %></li>
+      <li> <%= link_to t('doctors_office'), root_path %></li>
+      <li> <%= link_to t('appointments'), root_path %></li>
+      <li> <%= link_to t('products'), root_path %></li>
+      <li> <%= link_to t('contact'), root_path %></li>
+      <li> <%= link_to t('about'), root_path %></li>
+    </ul>
+  </div>
+</nav>
