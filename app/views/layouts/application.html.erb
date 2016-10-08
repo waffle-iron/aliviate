@@ -9,13 +9,17 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
 
   <body>
-    <%= render partial: "partials/navigation" %>
-    <div class="container">
-      <%= yield %>
-    </div>
-    <%= render partial: "partials/footer" %>
+    <main>
+      <%= render partial: "partials/navigation" %>
+      <div class="container">
+        <%= yield %>
+      </div>
+      <%= render partial: "partials/footer" %>
+    </main>
   </body>
 </html>
