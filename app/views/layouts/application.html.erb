@@ -14,12 +14,10 @@
   </head>
 
   <body>
+    <%= render partial: "partials/navigation" %>
     <main>
-      <%= render partial: "partials/navigation" %>
-      <div class="container">
-        <%= yield %>
-      </div>
-      <%= render partial: "partials/footer" %>
+      <%= yield %>
     </main>
+    <%= render partial: "partials/footer" %>
   </body>
 </html>
