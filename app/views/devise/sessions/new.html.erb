@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h3 class="center"> Iniciar Sesión </h3> 
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "col s12" }) do |f| %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :email, id: "email", class: "validate" %>
+          <%= f.label :email, for: "email" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.password_field :password, id: "password", class: "validate" %>
+          <%= f.label :password, for: "password" %>
+        </div>
+      </div>
+      <div class="container center">
+        <%= f.submit "Iniciar Sesión", class: "btn waves-effect waves-light light-blue darken-3" %>
+      </div>
+    <% end %>
+  </div>
+</div>
