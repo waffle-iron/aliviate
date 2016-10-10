@@ -20,12 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-    logo: "Aliviate"
-    home: "Inicio"
-    news: "Noticias"
-    schedule: "Programacion"
-    doctors_office: "Consultorio"
-    appointments: "Citas"
-    products: "Productos"
-    contact: "Contacto"
-    about: "Nosotros"
+  logo: "Aliviate"
+  home: "Inicio"
+  news: "Noticias"
+  schedule: "Programacion"
+  doctors_office: "Consultorio"
+  appointments: "Citas"
+  products: "Productos"
+  contact: "Contacto"
+  about: "Nosotros"
