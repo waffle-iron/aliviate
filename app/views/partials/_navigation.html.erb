@@ -1,8 +1,6 @@
 <nav class="blue darken-3">
   <div class="nav-wrapper">
-    <div class="container">
-      <%= link_to "ALIVIATE", root_path, class: "brand-logo" %>
-    </div>
+    <%= link_to "ALIVIATE", root_path, class: "brand-logo" %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li> <%= link_to t('news').upcase, root_path %></li>
@@ -10,7 +8,7 @@
       <li> <%= link_to t('doctors_office').upcase, root_path %></li>
       <li> <%= link_to t('appointments').upcase, root_path %></li>
       <li> <%= link_to t('products').upcase, root_path %></li>
-      <li> <%= link_to t('contact').upcase, root_path %></li>
+      <%# <li> <%= link_to t('contact').upcase, root_path %1></li> %>
       <li> <%= link_to t('about').upcase, root_path %></li>
 
       <% if current_user %>
