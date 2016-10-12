@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  # Protect_from_forgery will be delete whit SSL
+  # Protect_from_forgery will be delete with SSL
 
   protect_from_forgery with: :exception
 
