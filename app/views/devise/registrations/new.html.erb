@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <h3 class="center"> Regístrate </h3> 
+    <%= link_to "Regístrate con Facebook", user_facebook_omniauth_authorize_url %>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "col s12" }) do |f| %>
       <div class="row">
         <div class="input-field col s6">
