@@ -21,6 +21,7 @@ class User < ApplicationRecord
       user = find_by(email: auth.info.email)
       user.provider = auth.provider
       user.uid = auth.uid
+      user.first_name = auth.info.name
       user.save
     elsif where(provider: auth.provider, uid: auth.uid).exists?
       user = find_by(provider: auth.provider, uid: auth.uid)
