@@ -1,9 +1,9 @@
 class AddFieldsToUser < ActiveRecord::Migration[5.0]
 
   def up
-    add_column :users, :first_name, :string, null: false
-    add_column :users, :last_name, :string, null: false
-    add_column :users, :telephone, :string, null: false
+    add_column :users, :first_name, :string
+    add_column :users, :last_name, :string
+    add_column :users, :telephone, :string
     add_column :users, :cellphone, :string
     add_column :users, :address, :string
     add_column :users, :is_admin, :boolean, default: false

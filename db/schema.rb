@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20161011152513) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "first_name",                             null: false
-    t.string   "last_name",                              null: false
-    t.string   "telephone",                              null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "telephone"
     t.string   "cellphone"
     t.string   "address"
     t.boolean  "is_admin",               default: false

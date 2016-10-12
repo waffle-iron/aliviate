@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
-    <h3 class="center"> Iniciar Sesión </h3> 
-    <%= link_to "Inicia con Facebook", user_facebook_omniauth_authorize_url %>
+    <div class="center">
+      <h3> Iniciar Sesión </h3> 
+      <%= link_to "Inicia con Facebook", user_facebook_omniauth_authorize_url, class: "btn blue darken-4 facebook" %>
+    </div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "col s12" }) do |f| %>
       <div class="row">
         <div class="input-field col s12">
