@@ -1,7 +1,4 @@
-# ALIVIATE
-
-![](https://circleci.com/gh/fmauricios/aliviate.svg?style=shield&circle-token=:circle-token)
-![](https://circleci.com/gh/fmauricios/aliviate.png?circle-token=:circle-token)
+# ALIVIATE [![CircleCI](https://circleci.com/gh/fmauricios/aliviate.svg?style=svg&circle-token=80196cc6e9915a0614d47f20a55538b61180551d)](https://circleci.com/gh/fmauricios/aliviate)
 
 ![](https://cloud.githubusercontent.com/assets/8335556/18819628/c6a0e692-8359-11e6-9b27-095feb9255b7.png)
 
