@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="center">
+      <h3> Regístrate </h3> 
+      <%= link_to "Regístrate con Facebook", user_facebook_omniauth_authorize_url, class: "btn blue darken-4 facebook" %>
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "col s12" }) do |f| %>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.text_field :first_name, id: "first_name", class: "validate" %>
+          <%= f.label :first_name, for: "first_name" %>
+        </div>
+        <div class="input-field col s6">
+          <%= f.text_field :last_name, id: "last_name", class: "validate" %>
+          <%= f.label :last_name, for: "last_name" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :email, id: "email", class: "validate" %>
+          <%= f.label :email, for: "email" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.password_field :password, id: "password", class: "validate" %>
+          <%= f.label :password, for: "password" %>
+        </div>
+
+        <div class="input-field col s6">
+          <%= f.password_field :password_confirmation, id: "password_confirmation", class: "validate" %>
+          <%= f.label :password_confirmation, for: "password_confirmation" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.text_field :telephone, id: "telephone", class: "validate" %>
+          <%= f.label :telephone, for: "telephone" %>
+        </div>
+        <div class="input-field col s6">
+          <%= f.text_field :cellphone, id: "cellphone" %>
+          <%= f.label :cellphone, for: "cellphone" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :address, id: "address" %>
+          <%= f.label :address, for: "address" %>
+        </div>
+      </div>
+      <div class="container center">
+        <%= f.submit "Registrarse", class: "btn waves-effect waves-light light-blue darken-3" %>
+      </div>
+    <% end %>
+  </div>
+</div>

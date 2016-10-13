@@ -1,8 +1,6 @@
 <nav class="blue darken-3">
   <div class="nav-wrapper">
-    <div class="container">
-      <a href="#!" class="brand-logo">ALIVIATE</a>
-    </div>
+    <%= link_to "ALIVIATE", root_path, class: "brand-logo" %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li> <%= link_to t('news').upcase, root_path %></li>
@@ -10,8 +8,24 @@
       <li> <%= link_to t('doctors_office').upcase, root_path %></li>
       <li> <%= link_to t('appointments').upcase, root_path %></li>
       <li> <%= link_to t('products').upcase, root_path %></li>
-      <li> <%= link_to t('contact').upcase, root_path %></li>
       <li> <%= link_to t('about').upcase, root_path %></li>
+
+      <% if current_user %>
+        <a class='dropdown-button btn deep-orange darken-1' data-activates='dropdown1'><%= current_user.first_name %></a>
+
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">Mi Perfil</a></li>
+          <li class="divider"></li>
+          <li> <%= link_to "CERRAR SESION", destroy_user_session_url, method: :delete %></li>
+        </ul>
+
+        <% if current_user.is_admin? %>
+          <li> <%= link_to "Panel de Administración", admin_url %></li>
+        <% end %>
+      <% else %>
+        <li> <%= link_to "REGISTRARSE", new_user_registration_url  %></li>
+        <li> <%= link_to "INICIAR", new_user_session_url %></li>
+      <% end %>
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li> <%= link_to t('news'), root_path %></li>
