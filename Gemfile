@@ -2,6 +2,7 @@ ruby '2.3.1'
 
 source 'https://rubygems.org'
 
+gem 'coffee-rails', '~> 4.2', '>= 4.2.1'
 gem 'devise', '~> 4.2'
 gem 'jquery-rails'
 gem 'materialize-sass', '~> 0.97.7'
