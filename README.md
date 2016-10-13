@@ -1,5 +1,8 @@
 # ALIVIATE
 
+![CircleCI Build Status](https://circleci.com/gh/fmauricios/aliviate.svg?style=shield&circle-token=:circle-token)
+![CircleCI Test](https://circleci.com/gh/fmauricios/aliviate.png?circle-token=:circle-token)
+
 ![](https://cloud.githubusercontent.com/assets/8335556/18819628/c6a0e692-8359-11e6-9b27-095feb9255b7.png)
 
 ## Contributing
