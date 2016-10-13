@@ -8,7 +8,6 @@
       <li> <%= link_to t('doctors_office').upcase, root_path %></li>
       <li> <%= link_to t('appointments').upcase, root_path %></li>
       <li> <%= link_to t('products').upcase, root_path %></li>
-      <%# <li> <%= link_to t('contact').upcase, root_path %1></li> %>
       <li> <%= link_to t('about').upcase, root_path %></li>
 
       <% if current_user %>
@@ -19,8 +18,6 @@
           <li class="divider"></li>
           <li> <%= link_to "CERRAR SESION", destroy_user_session_url, method: :delete %></li>
         </ul>
-        <%# <li> <%= link_to current_user.first_name, class: "" %1> %>
-        <%# <li> <%= link_to "CERRAR SESION", destroy_user_session_url, method: :delete %1></li> %>
 
         <% if current_user.is_admin? %>
           <li> <%= link_to "Panel de Administración", admin_url %></li>
