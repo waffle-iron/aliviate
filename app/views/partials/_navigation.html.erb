@@ -1,4 +1,4 @@
-<nav class="blue darken-3">
+<nav class="light-green lighten-1">
   <div class="nav-wrapper">
     <%= link_to "ALIVIATE", root_path, class: "brand-logo" %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -8,7 +8,7 @@
       <li> <%= link_to t('doctors_office').upcase, root_path %></li>
       <li> <%= link_to t('appointments').upcase, root_path %></li>
       <li> <%= link_to t('products').upcase, root_path %></li>
-      <li> <%= link_to t('about').upcase, root_path %></li>
+      <li> <%= link_to t('about').upcase, about_path %></li>
 
       <% if current_user %>
         <a class='dropdown-button btn deep-orange darken-1' data-activates='dropdown1'><%= current_user.first_name %></a>
@@ -34,7 +34,7 @@
       <li> <%= link_to t('appointments'), root_path %></li>
       <li> <%= link_to t('products'), root_path %></li>
       <li> <%= link_to t('contact'), root_path %></li>
-      <li> <%= link_to t('about'), root_path %></li>
+      <li> <%= link_to t('about'), about_path %></li>
     </ul>
   </div>
 </nav>
