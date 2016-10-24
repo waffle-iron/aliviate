@@ -1,0 +1,11 @@
+<div class="container">
+  <h4 class="center"> Contactanos </h4>
+  <div class="row">
+    <%= simple_form_for @contact do |f| %>
+      <%= f.input :name, id: "name", required: true %>
+      <%= f.input :email, id: "email", required: true %>
+      <%= f.input :message, as: :text, id: "message", required: true, input_html: {style: 'height: 150px;'} %>
+      <%= f.submit "Enviar mensaje", class: "btn waves-effect waves-light teal darken-1" %>
+    <% end %>
+  </div>
+</div>

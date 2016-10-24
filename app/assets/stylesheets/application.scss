@@ -5,3 +5,17 @@ div span.flash_message {
   margin-top: 10px;
   background-color: #5DBB6C;
 }
+
+#error_explanation {
+  h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  ul {
+    li {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div id="map"></div>
+  </div>
+</div>
+
+<script>
+  var map;
+  function initMap() {
+    var myLatLng = {lat: 6.24902, lng: -75.564053};
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 18
+    });
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+    });
+
+    google.maps.event.addDomListener(window, "resize", function() {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, "resize");
+      map.setCenter(center); 
+    });
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj6QTFFf64x_TkU0wM5u7VUpV2vsVnNww&callback=initMap"
+        async defer>
+</script>

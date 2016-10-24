@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
 
   root "pages#home"
-  get "about", to: "pages#about"
+  get "/about", to: "pages#about"
+
+  resources :contacts, only: [:new, :create]
 
 end
