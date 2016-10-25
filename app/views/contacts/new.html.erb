@@ -1,11 +1,74 @@
 <div class="container">
-  <h4 class="center"> Contactanos </h4>
+  <h3 class="center"> <%= t('contact_me') %> </h3>
   <div class="row">
-    <%= simple_form_for @contact do |f| %>
-      <%= f.input :name, id: "name", required: true %>
-      <%= f.input :email, id: "email", required: true %>
-      <%= f.input :message, as: :text, id: "message", required: true, input_html: {style: 'height: 150px;'} %>
-      <%= f.submit "Enviar mensaje", class: "btn waves-effect waves-light teal darken-1" %>
+    <%= form_for @contact do |f| %>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.text_field :full_name, id: "name", class: "validate", required: true %>
+          <%= f.label t('full_name'), for: "name" %>
+        </div>
+        <div class="input-field col s6">
+          <%= f.text_field :email, id: "email", class: "validate", required: true %>
+          <%= f.label t('email'), for: "email" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_area :message, as: :text, class: "materialize-textarea", id: "message" %>
+          <%= f.label t('message'), for: "email" %>
+        </div>
+      </div>
+      <div class="container center">
+        <%= f.submit t('send_contact'), class: "btn waves-effect waves-light teal darken-1" %>
+      </div>
     <% end %>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col l6 s12">
+      <h5><i class="material-icons">location_on</i>&nbsp<%= t('address') %></h5>
+      <p class="text-lighten-4"><%= t('full_address') %></p>
+    </div>
+    <div class="col l4 offset-l2 s12">
+      <h5><i class="material-icons">phone</i>&nbsp<%= t('phones') %></h5>
+      <ul>
+        <li> <%= t('first_phone') %></li>
+        <li><%= t('second_phone') %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div id="map"></div>
+  </div>
+</div>
+
+<script>
+  var map;
+  function initMap() {
+    var myLatLng = {lat: 6.24902, lng: -75.564053};
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 18
+    });
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+    });
+
+    google.maps.event.addDomListener(window, "resize", function() {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, "resize");
+      map.setCenter(center); 
+    });
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj6QTFFf64x_TkU0wM5u7VUpV2vsVnNww&callback=initMap"
+        async defer>
+</script>

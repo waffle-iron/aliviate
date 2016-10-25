@@ -6,16 +6,24 @@ div span.flash_message {
   background-color: #5DBB6C;
 }
 
-#error_explanation {
-  h2 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    text-align: center;
-  }
+form {
+  margin-top: 35px;
+}
 
-  ul {
-    li {
-      color: red;
-    }
-  }
+.social_networks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.social-item {
+  float: left;
+}
+
+.social_networks .social-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
 }
