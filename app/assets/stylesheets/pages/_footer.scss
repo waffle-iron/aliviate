@@ -11,3 +11,39 @@ main {
 li, a {
   color: inherit;
 }
+
+// .social_networks {
+//   .fa-facebook-official {
+//     color: #3B5998;
+//   }
+
+//   .fa-twitter-square {
+//     color: #49AAE6;
+//   }
+
+//   .fa-google-plus {
+//     color: #DB4437;
+//   }
+
+//   .fa-pinterest-square {
+//     color: #CD0000;
+//   }
+// }
+
+.social_networks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.social-item {
+  float: left;
+}
+
+.social_networks .social-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+}
