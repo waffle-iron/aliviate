@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/5925dfa538.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   </head>
@@ -16,13 +17,7 @@
   <body>
     <%= render partial: "partials/navigation" %>
     <main>
-      <div class="container center ">
-        <% flash.each do |key, value| %>
-          <span class="waves-effect waves-light btn flash_message">
-            <%= value %>
-          </span>
-        <% end %>
-      </div>
+      <%= render partial: "partials/flash_messages" %>
       <%= yield %>
     </main>
     <%= render partial: "partials/footer" %>

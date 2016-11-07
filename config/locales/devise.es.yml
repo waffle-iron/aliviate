@@ -1,16 +1,28 @@
 es:
   activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: El campo correo electrónico no puede estar vacío.
+              taken: El correo ya existe.
+            password:
+              blank: El campo contraseña no puede estar vacío.
+            full_name:
+              blank: El campo nombre completo no puede estar vació.
     attributes:
       user:
         current_password: Contraseña actual
         email: Correo electrónico
         first_name: Nombres
         last_name: Apellidos
+        full_name: Nombre completo
         telephone: Teléfono fijo
         cellphone: Celular
         address: Dirección
         password: Contraseña
-        password_confirmation: Confirmación de la contraseña
+        password_confirmation: Repite tu contraseña
         remember_me: Recordarme
         reset_password_token: Restablecer token contraseña
         unlock_token: Desbloquear token
@@ -121,5 +133,5 @@ es:
       not_found: no se ha encontrado
       not_locked: no estaba bloqueada
       not_saved:
-        one: 'Ocurrió un error al tratar de guardar %{resource}:'
-        other: 'Ocurrieron %{count} errores al tratar de guardar %{resource}:'
+        one: 'Ocurrió un error al tratar de guardar %{resource}'
+        other: 'Ocurrieron errores al tratar de guardar %{resource}'

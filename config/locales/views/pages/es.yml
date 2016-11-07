@@ -25,3 +25,13 @@ es:
                               servicios que cumplan las especificaciones técnicas y los requerimientos pactados,
                               a través de una buena relación con los proveedores, clientes y un grupo humano
                               capacitado y dotado con los recursos necesarios que faciliten el mejoramiento continuo."
+  contact_me: "Contáctanos"
+  send_contact: "Enviar mensaje"
+  full_name: "Nombre completo"
+  email: "Correo electrónico"
+  message: "Mensaje"
+  address: "Dirección"
+  full_address: "Calle 52 Nº 45 - 56 Consultorio 102 - Medellín"
+  phones: "Teléfonos"
+  first_phone: "5124260"
+  second_phone: "4484268"

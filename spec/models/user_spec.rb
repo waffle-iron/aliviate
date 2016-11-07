@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   describe ".from_omniauth" do
     it "when email exist" do
       user = User.create(
-        first_name: "Juanito",
+        full_name: "Juanito",
         email: "example@example.com",
         password: "my_secure_password",
         uid: nil
@@ -30,13 +30,13 @@ RSpec.describe User, type: :model do
       user = User.find_by(email: "example@example.com")
 
       expect(user.id).to eq(omni_user.id)
-      expect(user.first_name).to eq(omni_user.first_name)
+      expect(user.full_name).to eq(omni_user.full_name)
       expect(user.uid).to eq("123")
     end
 
     it "when facebook_id and provider exists" do
       user = User.create(
-        first_name: "Juanito",
+        full_name: "Juanito",
         email: "other@example.com",
         provider: "facebook",
         uid: 123,
@@ -85,7 +85,7 @@ RSpec.describe User, type: :model do
 
       expect {
         new_user = User.from_omniauth(info)
-        expect(new_user.first_name).to eq("Juanito")
+        expect(new_user.full_name).to eq("Juanito")
         expect(new_user.uid).to eq("123")
         expect(new_user.email).to eq("juanito@example.com")
 

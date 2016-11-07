@@ -1,17 +1,15 @@
 .container-fluid {
-  font-size: 1em;
+  font-size: 1.35em;
   div {
     text-align: left;
   }
-  .row {
-    padding: 1em 0em 3em 0em;
-  }
+
   h2 {
     padding-bottom: 0.3em;
   }
 }
 
-.text-center {
+.about-content {
   padding-top: 4.3% !important;
 }
 
@@ -20,10 +18,7 @@
 }
 
 @media #{$small-and-down}{
-  .row {
-    padding: 1em 1em 1em 1em;
-  }
   .container-fluid {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
