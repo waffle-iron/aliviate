@@ -4,7 +4,7 @@
     <%= form_for @contact do |f| %>
       <div class="row">
         <div class="input-field col s6">
-          <%= f.text_field :full_name, id: "name", class: "validate", required: true %>
+          <%= f.text_field :name, id: "name", class: "validate", required: true %>
           <%= f.label t('full_name'), for: "name" %>
         </div>
         <div class="input-field col s6">
