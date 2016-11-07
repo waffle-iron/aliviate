@@ -18,6 +18,12 @@
           <%= f.label t('message'), for: "email" %>
         </div>
       </div>
+      <div class="row">
+        <div class="input-field col s12 hidden">
+          <%= f.text_field :nickname %>
+          <%= f.label :nickname, hint: "Deje este campo en blanco" %>
+        </div>
+      </div>
       <div class="container center">
         <%= f.submit t('send_contact'), class: "btn waves-effect waves-light teal darken-1" %>
       </div>

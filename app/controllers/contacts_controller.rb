@@ -9,11 +9,12 @@ class ContactsController < ApplicationController
     @contact.request = request
 
     if @contact.deliver
-      flash.now[:success] = "Mensaje enviado."
+      flash.now[:error] = nil
     else
-      flash.now[:error] = 'No se pudo enviar el mensaje.'
+      flash.now[:error] = "No se pudo enviar el mensaje."
       render :new
     end
   end
+
 end
 
