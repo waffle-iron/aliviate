@@ -33,10 +33,12 @@ es:
   copyright: "Aliviate © 2016 Todos los derechos reservados."
   social_networks: "Redes sociales"
   profile: "Mi perfil"
+<<<<<<< bedd9604445a1da0b522427fa8e735ce68e0c95f
   sign_out: "Cerrar sesión"
   admin_panel: "Administración"
   registration: "Registrarse"
   login: "Iniciar sesión"
+<<<<<<< 7b999e7d38b97edc70981d7b409042b2a66c5aff
   articles: "Artículos"
   products: "Productos"
   users: "Usuarios"
@@ -48,3 +50,10 @@ es:
   deleted_successfully: "Eliminado con éxito"
   success_email_message: "El mensaje ha sido enviado con éxito."
   error_email_message: "No se pudo enviar el mensaje."
+=======
+=======
+  sign_up: "Registrarse"
+  sign_in: "Inciar"
+  sign_out: "Cerrar sesíon"
+>>>>>>> Add translations, Add show view for users and include route for update
+>>>>>>> Add translations, Add show view for users and include route for update
