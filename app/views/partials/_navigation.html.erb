@@ -14,11 +14,16 @@
       <% if user_signed_in? %>
         <a class="dropdown-button btn deep-orange darken-1" data-activates="dropdown1"><%= current_user.full_name %></a>
 
+<<<<<<< 7b999e7d38b97edc70981d7b409042b2a66c5aff
         <ul id="dropdown1" class="dropdown-content">
           <li><a href="#!"><%= t('profile') %></a></li>
           <% if current_user.is_admin? %>
             <li> <%= link_to t('admin_panel'), admin_root_url %></li>
           <% end %>
+=======
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><%= link_to t('profile'), "/users/#{current_user.id}" %></a></li>
+>>>>>>> Add translations, Add show view for users and include route for update
           <li class="divider"></li>
           <li> <%= link_to t('sign_out'), destroy_user_session_url, method: :delete %></li>
         </ul>
