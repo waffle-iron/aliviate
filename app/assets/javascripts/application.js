@@ -6,7 +6,11 @@
 
 document.addEventListener("turbolinks:load", function() {
   $(".flash_message").fadeOut(6000)
+
   $('.collapsible').collapsible({
     accordion: false
   });
+
+  $(".button-collapse").sideNav();
+
 })
