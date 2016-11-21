@@ -12,30 +12,34 @@
       <li> <%= link_to t('contact').upcase, new_contact_url %></li>
 
       <% if user_signed_in? %>
-        <a class='dropdown-button btn deep-orange darken-1' data-activates='dropdown1'><%= current_user.full_name %></a>
+        <a class="dropdown-button btn deep-orange darken-1" data-activates="dropdown1"><%= current_user.full_name %></a>
 
-        <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="#!">Mi Perfil</a></li>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!"><%= t('profile') %></a></li>
           <li class="divider"></li>
-          <li> <%= link_to "CERRAR SESION", destroy_user_session_url, method: :delete %></li>
+          <li> <%= link_to t('sign_out'), destroy_user_session_url, method: :delete %></li>
         </ul>
 
         <% if current_user.is_admin? %>
-          <li> <%= link_to "Panel de Administración", admin_root_url %></li>
+          <li> <%= link_to t('admin_panel'), admin_root_url %></li>
         <% end %>
-      <%# <% else %1> %>
-        <%# <li> <%= link_to "REGISTRARSE", new_user_registration_url  %1></li> %>
-        <%# <li> <%= link_to "INICIAR", new_user_session_url %1></li> %>
       <% end %>
     </ul>
     <ul class="side-nav" id="mobile-demo">
+      <li> <%= user_signed_in? ? link_to(t('profile'), root_path) : link_to(t('login'), new_user_session_url) %></li>
       <li> <%= link_to t('news'), root_path %></li>
       <li> <%= link_to t('schedule'), root_path %></li>
       <li> <%= link_to t('doctors_office'), root_path %></li>
       <li> <%= link_to t('appointments'), root_path %></li>
       <li> <%= link_to t('products'), root_path %></li>
-      <li> <%= link_to t('contact'), root_path %></li>
+      <li> <%= link_to t('contact'), new_contact_url %></li>
       <li> <%= link_to t('about'), about_path %></li>
+
+      <% if user_signed_in? %>
+        <li> <%= link_to t('sign_out'), destroy_user_session_url, method: :delete %></li>
+      <% else %>
+        <li> <%= link_to t('registration'), new_user_registration_url  %></li>
+      <% end %>
     </ul>
   </div>
 </nav>

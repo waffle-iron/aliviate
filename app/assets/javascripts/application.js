@@ -4,4 +4,9 @@
 //= require materialize-sprockets
 //= require_tree
 
-$(".flash_message").fadeOut(6000)
+document.addEventListener("turbolinks:load", function() {
+  $(".flash_message").fadeOut(6000)
+  $('.collapsible').collapsible({
+    accordion: false
+  });
+})

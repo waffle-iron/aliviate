@@ -1,5 +1,10 @@
+<div class="row">
+  <div class="container">
+    <%= devise_error_messages! %>
+  </div>
+</div>
+
 <div class="container">
-  <%= devise_error_messages! %>
   <div class="row">
     <div class="center">
       <h3> Regístrate </h3> 
@@ -15,13 +20,13 @@
       <div class="row">
         <div class="input-field col s12">
           <%= f.text_field :email, id: "email", class: "validate" %>
-          <%= f.label :email, for: "email" %>
+          <%= f.label :email, for: "email", class: "active" %>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
           <%= f.password_field :password, id: "password", class: "validate" %>
-          <%= f.label :password, for: "password" %>
+          <%= f.label :password, for: "password", class: "active" %>
         </div>
 
         <div class="input-field col s6">
