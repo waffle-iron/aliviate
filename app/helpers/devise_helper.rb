@@ -5,16 +5,16 @@ module DeviseHelper
     messages = resource.errors.messages.map { |attr,msg| content_tag(:li, msg.join(', ')) }.join
 
     html = <<-HTML
-    <div class="row center">
-      <div class="col s12">
-        <div class="card-panel">
-          <h4> Faltan algunos campos por llenar </h4>
-          <ul>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header active center"><i class="material-icons error-icon">error</i> <span class="error-title"> ¡ UPS ! Algo ha sucedido </span> </div>
+        <div class="collapsible-body center">
+          <ul class="error-message">
             #{messages}
           </ul>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
     HTML
 
     html.html_safe
