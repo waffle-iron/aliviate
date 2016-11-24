@@ -8,6 +8,7 @@ es:
   title: Título
   published: Publicado
   created_at: Fecha de creación
+  confirm: ¿Estás seguro?
   actions: Acciones
   edit: Editar
   delete: Eliminar

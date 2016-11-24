@@ -71,4 +71,8 @@ RSpec.describe Admin::PostsController, type: :controller do
     end
   end
 
+  describe "DELETE destroy" do
+    it "destroys a post" do
+    end
+  end
 end

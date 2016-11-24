@@ -2,7 +2,7 @@ class Admin::PostsController < Admin::BaseController
 
   # Callbacks
 
-  before_action :find_post, only: [:edit, :update]
+  before_action :find_post, only: [:edit, :update, :destroy]
 
   # Methods
 

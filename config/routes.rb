@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: "dashboards#index"
-    resources :posts
+    resources :posts, except: [:show]
   end
 
   root "pages#home"
