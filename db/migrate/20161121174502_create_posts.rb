@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :title, null: false
       t.text :summary, null: false
       t.text :content, null: false
-      t.boolean :published, null: false
+      t.boolean :published, default: false
       t.timestamps
     end
   end
