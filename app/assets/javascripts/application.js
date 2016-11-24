@@ -12,8 +12,6 @@ document.addEventListener("turbolinks:load", function() {
     accordion: false
   });
 
-  $(".button-collapse").sideNav();
-
   var simplemde = new SimpleMDE({ element: document.getElementById("content") });
 
 })

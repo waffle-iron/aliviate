@@ -16,28 +16,7 @@
 
   <body>
     <main>
-      <ul id="slide-out" class="side-nav fixed">
-        <li>
-          <div class="userView">
-            <a href="<%= root_url %>"><span class="name"><%= current_user.full_name %></span></a>
-            <a href="#!email"><span class="email"><%= current_user.email %></span></a>
-          </div>
-        </li>
-        <li><a href="<%= root_path %>"><i class="material-icons">home</i><%= t('home') %></a></li>
-        <li><a href="<%= admin_root_url %>"><i class="material-icons">build</i><%= t('admin_panel') %></a></li>
-        <li><a href="<%= admin_posts_url %>"><i class="material-icons">forum</i><%= t('articles') %></a></li>
-        <li><a href="<%= root_url %>"><i class="material-icons">add_shopping_cart</i><%= t('products') %></a></li>
-        <li><a href="<%= root_url %>"><i class="material-icons">accessibility</i><%= t('users') %></a></li>
-        <li><a href="<%= root_url %>"><i class="material-icons">event</i><%= t('appoinment') %></a></li>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to destroy_user_session_url, method: :delete do %>
-              <i class="material-icons">exit_to_app</i> <%= t('sign_out') %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <%= render partial: "partials/admin_navbar" %> 
       <div class="admin-container">
         <%= render partial: "partials/flash_messages" %>
         <%= yield %>
