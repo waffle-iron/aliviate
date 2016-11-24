@@ -6,7 +6,7 @@
   <%= link_to t('new_post'), new_admin_post_url, class: "btn green darken-3" %>
 </div>
 
-<table class="responsive-table centered highlight">
+<table class="centered highlight">
   <thead>
     <tr>
       <th data-field="id"><%= t('title') %></th>
@@ -17,8 +17,8 @@
   </thead>
 
   <tbody>
-    <tr>
-      <% @posts.each do |post| %>
+    <% @posts.each do |post| %>
+      <tr>
         <td> <%= post.title %> </td>
         <td> 
           <% if post.published %>
@@ -31,10 +31,10 @@
         </td>
         <td> <%= post.created_at.strftime("%Y/%m/%d") %> </td>
         <td> 
-          <%= link_to t('edit'), edit_admin_post_url(post), class: "btn blue darken-3" %>
-          <%= link_to t('delete'), admin_post_url(post), method: :delete, data: { confirm: t('confirm') }, class: "btn red darken-4" %>
+          <%= link_to t('edit'), edit_admin_post_url(post), class: "btn blue darken-3 btn-edit" %>
+          <%= link_to t('delete'), admin_post_url(post), method: :delete, data: { confirm: t('confirm') }, class: "btn red darken-4 btn-delete" %>
         </td>
-      <% end %>
-    </tr>
+      </tr>
+    <% end %>
   </tbody>
 </table>
