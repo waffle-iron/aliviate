@@ -73,6 +73,16 @@ RSpec.describe Admin::PostsController, type: :controller do
 
   describe "DELETE destroy" do
     it "destroys a post" do
+      post = create(:post)
+      expect {
+        delete :destroy, params: {id: post.to_param}
+      }.to change(Post, :count).by(-1)
+    end
+
+    it "redirects to the posts list" do
+      post = create(:post)
+      delete :destroy, params: {id: post.to_param}
+      expect(response).to redirect_to(admin_posts_url)
     end
   end
 end
