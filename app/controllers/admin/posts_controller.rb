@@ -17,10 +17,8 @@ class Admin::PostsController < Admin::BaseController
   def create
     @post = Post.new(post_params)
 
-    binding.pry
-
     if @post.save
-      redirect_to admin_post_url, notice: t('created_successfully')
+      redirect_to admin_posts_url, notice: t('created_successfully')
     else
       render :new
     end
@@ -31,21 +29,15 @@ class Admin::PostsController < Admin::BaseController
 
   def update
     if @post.update(post_params)
-
-      binding.pry
-
-      redirect_to admin_post_url, notice: t('updated_successfully')
+      redirect_to admin_posts_url, notice: t('updated_successfully')
     else
-
-      binding.pry
-
       render :edit
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to admin_post_url, notice: t('deleted_successfully')
+    redirect_to admin_posts_url, notice: t('deleted_successfully')
   end
 
   private

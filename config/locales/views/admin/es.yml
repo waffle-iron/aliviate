@@ -1,4 +1,8 @@
 es:
+  helpers:
+    submit:
+      create: Crear
+      update: Actualizar
   dashboard: Panel de Administración
   posts_listing: Artículos
   title: Título

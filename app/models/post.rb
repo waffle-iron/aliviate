@@ -2,6 +2,6 @@ class Post < ApplicationRecord
 
   # Validations
 
-  validates :title, :summary, :content, :published, presence: true
+  validates :title, :summary, :content, presence: true
 
 end
