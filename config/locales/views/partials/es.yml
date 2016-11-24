@@ -46,3 +46,5 @@ es:
   created_successfully: "Creado con éxito"
   updated_successfully: "Actualizado con éxito"
   deleted_successfully: "Eliminado con éxito"
+  success_email_message: "El mensaje ha sido enviado con éxito."
+  error_email_message: "No se pudo enviar el mensaje."
