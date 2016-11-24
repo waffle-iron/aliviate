@@ -1,0 +1,30 @@
+<div class="container create-post">
+  <%= form_for [:admin, @post] do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_field :title, id: "title", class: "validate active", required: true %>
+        <%= f.label t('title'), for: "title" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_area :summary, as: :text, class: "materialize-textarea active", id: "summary" %>
+        <%= f.label t('summary'), for: "summary" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_area :content, as: :text, id: "content" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.check_box :published, id: "published" %>
+        <%= f.label t('published'), for: "published" %>
+      </div>
+    </div>
+    <div class="container center">
+      <%= f.submit "Create", class: "btn waves-effect waves-light teal darken-1" %>
+    </div>
+  <% end %>
+</div>

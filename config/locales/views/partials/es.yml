@@ -43,3 +43,6 @@ es:
   appoinment: "Citas"
   home: "Inicio"
   article_listing: "Listado de artículos"
+  created_successfully: "Creado con éxito"
+  updated_successfully: "Actualizado con éxito"
+  deleted_successfully: "Eliminado con éxito"

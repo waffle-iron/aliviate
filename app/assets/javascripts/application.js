@@ -5,6 +5,7 @@
 //= require_tree
 
 document.addEventListener("turbolinks:load", function() {
+  Materialize.updateTextFields();
   $(".flash_message").fadeOut(6000)
 
   $('.collapsible').collapsible({
@@ -12,5 +13,7 @@ document.addEventListener("turbolinks:load", function() {
   });
 
   $(".button-collapse").sideNav();
+
+  var simplemde = new SimpleMDE({ element: document.getElementById("content") });
 
 })

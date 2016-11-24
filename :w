@@ -1,7 +1,0 @@
-<div class="container">
-  <h3 class="center"> <%= t('dashboard') %> </h3>
-
-  <div class="collection">
-    <a href="#!" class="collection-item"><span class="badge"><%= link_to "Crear", root_path %></span><%= t('posts_listing') %></a>
-  </div>
-</div>
