@@ -1,5 +1,15 @@
 es:
-  full_name: "Nombre"
-  telephone: "Telefono"
-  cellphone: "Celular"
-  email: "Correo electrónico"
+  change_password: "Cambiar contraseña"
+  save: "Guardar cambios"
+  sign_up: "Registrarse"
+  successful_update: "Actualizacion exitosa"
+  verify_date: "Verifique sus datos"
+  sign_up_with_facebook: "Registrate con facebook"
+  email: Correo electrónico
+  full_name: Nombre completo
+  telephone: Teléfono fijo
+  cellphone: Celular
+  address: Dirección
+  password: Contraseña
+  password_confirmation: Repite tu contraseña
+  current_password: Contraseña actual
