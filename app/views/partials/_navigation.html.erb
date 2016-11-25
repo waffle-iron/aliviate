@@ -14,19 +14,18 @@
       <% if user_signed_in? %>
         <a class="dropdown-button btn deep-orange darken-1" data-activates="dropdown1"><%= current_user.full_name %></a>
 
-        <ul id="dropdown1" class='dropdown-content'>
-          <li><%= link_to t('profile'), edit_user_url(current_user) %></a></li>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!"><%= t('profile') %></a></li>
+          <% if current_user.is_admin? %>
+            <li> <%= link_to t('admin_panel'), admin_root_url %></li>
+          <% end %>
           <li class="divider"></li>
           <li> <%= link_to t('sign_out'), destroy_user_session_url, method: :delete %></li>
         </ul>
-
-        <% if current_user.is_admin? %>
-          <li> <%= link_to t('admin_panel'), admin_root_url %></li>
-        <% end %>
       <% end %>
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      <li> <%= user_signed_in? ? link_to(t('profile'),edit_user_url(current_user)) : link_to(t('login'), new_user_session_url) %></li>
+      <li> <%= user_signed_in? ? link_to(t('profile'), root_path) : link_to(t('login'), new_user_session_url) %></li>
       <li> <%= link_to t('news'), root_path %></li>
       <li> <%= link_to t('schedule'), root_path %></li>
       <li> <%= link_to t('doctors_office'), root_path %></li>
