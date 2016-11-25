@@ -17,10 +17,10 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(permit_params)
-      flash[:success]= t('successful_update')
+      flash[:success] = t('successful_update')
       redirect_to edit_user_url(@user)
     else
-      flash[:error]= t('verify_data')
+      flash[:error] = t('verify_data')
       redirect_to edit_user_url(@user)
     end
   end
