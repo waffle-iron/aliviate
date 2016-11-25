@@ -17,7 +17,7 @@ RSpec.describe UsersController, type: :controller do
     it "returns http success" do
       put :update, params: {id: user.id, user: {password: "123456"}}
       user.reload
-      expect(user.password).tp eq("123456")
+      expect(user.password).to eq("123456")
       expect(response).to redirect_to root_path
     end
   end
