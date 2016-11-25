@@ -1,0 +1,17 @@
+.admin-container {
+  padding-left: 300px;
+}
+
+.create-post {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width : 992px) {
+  .admin-container {
+    padding-left: 10px;
+  }
+
+  .btn-edit, .btn-delete {
+    margin-top: 5px;
+  }
+}

@@ -1,1 +1,18 @@
-<h1> <%= t('dashboard') %> </h1>
+<div class="container">
+  <div class="center">
+    <h3> <%= t('dashboard') %> </h3>
+
+    <div class="chip">
+      <%= image_tag "admin/book" %> Artículos
+      <%= @posts %>
+    </div>
+    <div class="chip">
+      <%= image_tag "admin/users" %> Usuarios
+      <%= @users %>
+    </div>
+    <div class="chip">
+      <%= image_tag "admin/products" %> Productos
+      20
+    </div>
+  </div>
+</div>

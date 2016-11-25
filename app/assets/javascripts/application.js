@@ -5,8 +5,13 @@
 //= require_tree
 
 document.addEventListener("turbolinks:load", function() {
+  Materialize.updateTextFields();
   $(".flash_message").fadeOut(6000)
+
   $('.collapsible').collapsible({
     accordion: false
   });
+
+  var simplemde = new SimpleMDE({ element: document.getElementById("content") });
+
 })

@@ -1,2 +1,21 @@
 es:
+  helpers:
+    submit:
+      create: Crear
+      update: Actualizar
   dashboard: Panel de Administración
+  posts_listing: Artículos
+  title: Título
+  published: Publicado
+  created_at: Fecha de creación
+  confirm: ¿Estás seguro?
+  actions: Acciones
+  edit: Editar
+  delete: Eliminar
+  new: Crear
+  summary: Resumen
+  content: Contenido
+  published: Publicado
+  create_post: Crear artículo
+  new_post: Nuevo artículo
+  edit_post: Editar artículo
