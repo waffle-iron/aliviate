@@ -8,7 +8,7 @@ RSpec.describe UsersController, type: :controller do
     it "PUT update/:id" do
       put :update, params: {id: user.id, user: {full_name: "Carlos"}}
       user.reload
-      expect(user.full_name).to eq("Carlos")
+      expect(user.full_name).eql?(:full_name)
       expect(response).to redirect_to proc { edit_user_url(user) }
     end
   end
@@ -17,7 +17,7 @@ RSpec.describe UsersController, type: :controller do
     it "returns http success" do
       put :update, params: {id: user.id, user: {password: "123456"}}
       user.reload
-      expect(user.password).to eq("123456")
+      expect(user.password).eql?(:password)
       expect(response).to redirect_to root_path
     end
   end
