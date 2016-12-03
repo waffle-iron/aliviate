@@ -4,4 +4,8 @@ class Post < ApplicationRecord
 
   validates :title, :summary, :content, presence: true
 
+  # Tags
+
+  acts_as_taggable
+
 end

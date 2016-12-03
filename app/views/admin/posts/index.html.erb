@@ -12,6 +12,7 @@
       <th data-field="id"><%= t('title') %></th>
       <th data-field="published"><%= t('published') %></th>
       <th data-field="created_at"><%= t('created_at') %></th>
+      <th data-field="tags"><%= t('tags') %></th>
       <th data-field="actions"> <%= t('actions') %> </th>
     </tr>
   </thead>
@@ -20,7 +21,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td> <%= post.title %> </td>
-        <td> 
+        <td>
           <% if post.published %>
             <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
             <label for="filled-in-box"></label>
@@ -30,7 +31,8 @@
           <% end %>
         </td>
         <td> <%= post.created_at.strftime("%Y/%m/%d") %> </td>
-        <td> 
+        <td> <%= post.tag_list %> </td>
+        <td>
           <%= link_to t('edit'), edit_admin_post_url(post), class: "btn blue darken-3 btn-edit" %>
           <%= link_to t('delete'), admin_post_url(post), method: :delete, data: { confirm: t('confirm') }, class: "btn red darken-4 btn-delete" %>
         </td>
