@@ -14,6 +14,12 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
+        <%= f.text_field :tag_list, id: "tag_list", value: @tags %>
+        <%= f.label :tag_list, "Tags (separados por comas)", for: "tag_list" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
         <%= f.text_area :content, as: :text, id: "content" %>
       </div>
     </div>

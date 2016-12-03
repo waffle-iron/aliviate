@@ -25,6 +25,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def edit
+    @tags = @post.tag_list.join(', ')
   end
 
   def update
@@ -47,7 +48,7 @@ class Admin::PostsController < Admin::BaseController
     end
 
     def post_params
-      params.require(:post).permit(:title, :summary, :content, :published)
+      params.require(:post).permit(:title, :summary, :content, :published, :tag_list)
     end
 
 end

@@ -35,6 +35,12 @@ RSpec.describe Admin::PostsController, type: :controller do
       put :update, params: {id: post.id, post: {title: ""}}
       expect(response).to have_http_status(:success)
     end
+
+    it "updates tags of post" do
+      put :update, params: {id: post.id, post: {tag_list: "health"}}
+      post.reload
+      expect(post.tag_list).to eq(["health"])
+    end
   end
 
   describe "GET new" do
@@ -50,7 +56,8 @@ RSpec.describe Admin::PostsController, type: :controller do
         title: "Valid title",
         summary: "Valid summary",
         content: "<p> This is a valid content</p>",
-        published: true
+        published: true,
+        tag_list: "wellness, health"
       }
     end
 
@@ -58,6 +65,12 @@ RSpec.describe Admin::PostsController, type: :controller do
       get :create, params: { post: valid_post }
       post = Post.last
       expect(post.title).to eq("Valid title")
+    end
+
+    it "add tags in new post" do
+      get :create, params: { post: valid_post }
+      post = Post.last
+      expect(post.tag_list).to eq(["health", "wellness"])
     end
 
     it "redirects when successful" do
