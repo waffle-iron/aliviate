@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   get "/about", to: "pages#about"
 
   resources :contacts, only: [:new, :create]
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:edit, :update]
 
 end

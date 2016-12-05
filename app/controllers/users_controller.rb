@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   # Callbacks
 
   before_action :validate_user
+  before_action :edit, only: [:update, :edit]
+
 
   # Methods
 
@@ -10,13 +12,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
-    @user = User.find(params[:id])
-  end
-
   def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(permit_params)
+    if @user.update(permit_params)
       flash[:success] = t('successful_update')
       redirect_to edit_user_url(@user)
     else
@@ -26,6 +23,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+    def edit
+      @user = User.find(params[:id])
+    end
 
     def permit_params
     params.require(:user).permit(:full_name, :email, :telephone,
