@@ -14,16 +14,16 @@
       <div><%= t('currently_waiting_confirmation_for_email')%><%= resource.unconfirmed_email %></div>
     <% end %>
     <div class="input-field col s12">
-      <%= f.label t('password') %>
-      <%= f.password_field :password, autocomplete: "off"%>
+      <%= f.label t('password'), for: "password" %>
+      <%= f.password_field :password, autocomplete: "off", id: "password"%>
     </div>
     <div class="input-field col s12">
-      <%= f.label t('password_confirmation') %>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.label t('password_confirmation'), for: "password_confirmation" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", id: "password_confirmation" %>
     </div>
     <div class="input-field col s12">
-      <%= f.label t('current_password') %>
-      <%= f.password_field :current_password, autocomplete: "off" %>
+      <%= f.label t('current_password'), for: "current_password" %>
+      <%= f.password_field :current_password, autocomplete: "off", id: "current_password" %>
     </div>
     <div class="actions center-align">
       <%= f.submit t('save'), class:"btn waves-effect waves-light blue darken-1" %>
