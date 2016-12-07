@@ -3,8 +3,11 @@ class UsersController < ApplicationController
   # Callbacks
 
   before_action :validate_user
+<<<<<<< HEAD
   before_action :edit, only: [:update, :edit]
 
+=======
+>>>>>>> 5895a0334a419d985270980a7af326eff702c8cb
 
   # Methods
 
@@ -12,8 +15,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+<<<<<<< HEAD
   def update
     if @user.update(permit_params)
+=======
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(permit_params)
+>>>>>>> 5895a0334a419d985270980a7af326eff702c8cb
       flash[:success] = t('successful_update')
       redirect_to edit_user_url(@user)
     else
@@ -24,10 +37,13 @@ class UsersController < ApplicationController
 
   private
 
+<<<<<<< HEAD
     def edit
       @user = User.find(params[:id])
     end
 
+=======
+>>>>>>> 5895a0334a419d985270980a7af326eff702c8cb
     def permit_params
     params.require(:user).permit(:full_name, :email, :telephone,
                                  :cellphone, :address)
