@@ -20,3 +20,4 @@ es:
   new_post: Nuevo artículo
   edit_post: Editar artículo
   tags: Categorías
+  tag_list: Tags(separados por comas)

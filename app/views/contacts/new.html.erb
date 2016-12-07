@@ -15,7 +15,7 @@
       <div class="row">
         <div class="input-field col s12">
           <%= f.text_area :message, as: :text, class: "materialize-textarea", id: "message" %>
-          <%= f.label t('message'), for: "email" %>
+          <%= f.label t('message'), for: "message" %>
         </div>
       </div>
       <div class="row">
@@ -70,7 +70,7 @@
     google.maps.event.addDomListener(window, "resize", function() {
       var center = map.getCenter();
       google.maps.event.trigger(map, "resize");
-      map.setCenter(center); 
+      map.setCenter(center);
     });
   }
 </script>
