@@ -1,18 +1,45 @@
 <div class="profile row">
   <div class="left-align col l4 m10 s10 push-l4 push-m1 push-s1 pull-l4 pull-m1 pull-s1">
     <div class="black-text">
-    <h4 class="center-align"><%= t('change_password') %></h4>
+    <h4 class="center-align"><%= @user.full_name.titleize %></h4>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
-
     <div class="input-field col s12">
-      <%= f.label t('email'), class: "active"  %>
-      <%= f.email_field :email%>
+      <%= f.text_field :full_name, id: "full_name", class: "validate" %>
+      <%= f.label t('full_name'), for: "full_name", class: "active" %>
     </div>
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div><%= t('currently_waiting_confirmation_for_email')%><%= resource.unconfirmed_email %></div>
-    <% end %>
+    <div class="input-field col s12">
+      <%= f.text_field :email, id: "email", class: "validate" %>
+      <%= f.label t('email'), for: "email", class: "active" %>
+    </div>
+    <div class="input-field col s12">
+      <% if @user.telephone != nil%>
+        <%= f.text_field :telephone, id: "telephone", class: "validate" %>
+        <%= f.label t('telephone'), for: "telephone", class: "active" %>
+      <% else %>
+        <%= f.text_field :telephone, id: "telephone", class: "validate", value: "" %>
+        <%= f.label t('telephone'), for: "telephone", class: "" %>
+      <% end %>
+    </div>
+    <div class="input-field col s12">
+      <% if @user.cellphone != nil %>
+        <%= f.text_field :cellphone, id: "cellphone" %>
+        <%= f.label t('cellphone'), for: "cellphone", class: "active" %>
+      <% else %>
+        <%= f.text_field :cellphone, id: "cellphone", value: ""%>
+        <%= f.label t('cellphone'), for: "cellphone", class: "" %>
+      <% end %>
+    </div>
+    <div class="input-field col s12">
+      <% if @user.address != nil %>
+        <%= f.text_field :address, id: "address" %>
+        <%= f.label t('address'), for: "address", class: "active" %>
+      <% else %>
+        <%= f.text_field :address, id: "address", value: "" %>
+        <%= f.label t('address'), for: "address", class: "" %>
+        <% end %>
+    </div>
     <div class="input-field col s12">
       <%= f.label t('password'), for: "password" %>
       <%= f.password_field :password, autocomplete: "off", id: "password"%>
@@ -20,10 +47,6 @@
     <div class="input-field col s12">
       <%= f.label t('password_confirmation'), for: "password_confirmation" %>
       <%= f.password_field :password_confirmation, autocomplete: "off", id: "password_confirmation" %>
-    </div>
-    <div class="input-field col s12">
-      <%= f.label t('current_password'), for: "current_password" %>
-      <%= f.password_field :current_password, autocomplete: "off", id: "current_password" %>
     </div>
     <div class="actions center-align">
       <%= f.submit t('save'), class:"btn waves-effect waves-light blue darken-1" %>
