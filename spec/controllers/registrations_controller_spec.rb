@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe RegistrationsController, type: :controller do
+RSpec.describe Users::RegistrationsController, type: :controller do
 
   let(:user) { create(:user) }
   before(:each) { sign_in(user) }
