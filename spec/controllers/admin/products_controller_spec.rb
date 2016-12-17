@@ -20,10 +20,8 @@ RSpec.describe Admin::ProductsController, type: :controller do
 
   describe "PUT update" do
     it "updates product information" do
-      binding.pry
       put :update, params: { id: product.id, product: { name: "Pastillas Miguel" } }
       product.reload
-      binding.pry
       expect(product.name).to eq("Pastillas Miguel")
     end
 
