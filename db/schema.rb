@@ -25,10 +25,12 @@ ActiveRecord::Schema.define(version: 20161217132035) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string  "name",        null: false
-    t.text    "description", null: false
-    t.decimal "price",       null: false
-    t.integer "quantity"
+    t.string   "name",        null: false
+    t.text     "description", null: false
+    t.decimal  "price",       null: false
+    t.integer  "quantity"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "taggings", force: :cascade do |t|

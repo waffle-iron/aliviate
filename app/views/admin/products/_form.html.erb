@@ -1,0 +1,29 @@
+<div class="container create-post">
+  <%= form_for [:admin, @product] do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_field :name, id: "name", class: "validate active", required: true %>
+        <%= f.label t('name'), for: "name" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_area :description, as: :text, class: "materialize-textarea active", id: "description" %>
+        <%= f.label t('description'), for: "description" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.number_field :price, id: "price", value: number_to_currency(f.object.price.to_f, delimiter: '', unit: ''), step: :any %>
+        <%= f.label t('price'), for: "price" %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.number_field :quantity, id: "quantity" %>
+        <%= f.label t('quantity'), for: "quantity" %>
+      </div>
+    </div>
+    <div class="container center">
+      <%= f.submit class: "btn waves-effect waves-light teal darken-1" %>
+    </div>
+  <% end %>
+</div>
