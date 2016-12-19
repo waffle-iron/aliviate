@@ -1,0 +1,34 @@
+<div class="admin-container">
+  <h3> <%= t('product_listing') %></h3>
+</div>
+
+<div class="row">
+  <%= link_to t('new_product'), new_admin_product_url, class: "btn green darken-3" %>
+</div>
+
+<table class="centered highlight">
+  <thead>
+    <tr>
+      <th data-field="name"><%= t('name') %></th>
+      <th data-field="price"><%= t('price') %></th>
+      <th data-field="quantity"><%= t('quantity') %></th>
+      <th data-field="created_at"><%= t('created_at') %></th>
+      <th data-field="actions"> <%= t('actions') %> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td> <%= product.name %> </td>
+        <td> <%= product.price %></td>
+        <td> <%= product.quantity %></td>
+        <td> <%= product.created_at.strftime("%Y/%m/%d") %> </td>
+        <td>
+          <%= link_to t('edit'), edit_admin_product_url(product), class: "btn blue darken-3 btn-edit" %>
+          <%= link_to t('delete'), admin_product_url(product), method: :delete, data: { confirm: t('confirm') }, class: "btn red darken-4 btn-delete" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
