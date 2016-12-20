@@ -25,7 +25,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def edit
-    @tags = @post.tag_list.join(', ')
+    @tags = @post.tags_separated_by_commas
   end
 
   def update
